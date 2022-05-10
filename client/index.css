@@ -1,0 +1,120 @@
+#login-btn {
+    text-decoration: none;
+    /* width: 50px; */
+    /* border-radius: 5px; */
+    text-align: center;
+    color: white;
+    font-size: x-large;
+}
+#login-btn:hover {
+    
+}
+
+#charac-img {
+    width: 300px;
+    height: 300px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+
+#charac-img:hover {
+  transform: scale(1.1);
+}
+
+#top-section {
+    background-color: #400406;
+    border-radius: 10px;
+    padding: 2%;
+    text-align: center;
+    
+}
+#how-to-use-desc{
+    text-align: center;
+}
+#mid-section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#see-all{
+    padding: 5px;
+    opacity: 70%;
+    font-family: 'Teko', sans-serif;
+    font-size: x-large;
+    
+    
+}
+#see-all:hover{
+    opacity: 100%;
+}
+#all-legends{
+display: flex;
+width: 100vw;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+#favLegends {
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+} 
+
+ #favLegends > div > img{
+  width: 70px;
+}
+
+.character-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.ability-img{
+/* display: flex;
+justify-content: center;
+align-items: center; */
+ height: 70px;
+ width: 70px;
+}
+
+.tooltip-wrap {
+    position: relative;
+  }
+  .tooltip-wrap .tooltip-content {
+    display: none;
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    right: 5%;
+    background-color: rgba(64, 4, 6, 0.7);
+    border-radius: 0 0 10px 10px;
+    padding: .5em;
+    transition: 0s;
+
+  }
+  
+  .tooltip-wrap:hover .tooltip-content {
+      transition-delay: 4s;
+      display: flex;
+      flex-direction: row;
+      font-size: medium;
+      justify-content: space-evenly;
+
+
+  }
+.ability-container{
+     display: flex;
+    /* justify-content: center; */ 
+}
+
+.desc-ability{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-around;
+}

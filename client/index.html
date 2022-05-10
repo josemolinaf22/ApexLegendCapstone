@@ -6,53 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apex Legends</title>
     <link rel="stylesheet" href="/css">
+    <link rel="stylesheet" href="/maincss">
+    <!-- favicon -->
+    <link rel="icon"  href="/favi">
     <!-- testing before pushing  -->
     <!-- <link rel="stylesheet" href="indexstyles.css"> -->
     <!-- google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Teko:wght@300&display=swap" rel="stylesheet">
+<!-- fontawesome -->
+<script src="https://kit.fontawesome.com/c3d8ec9fd6.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<section id="header">
-    <img src="https://logos-world.net/wp-content/uploads/2020/11/Apex-Legends-Emblem.png" alt="apex logo" id="logo">
-    <h1>Apex Legends</h1>
-    <a href="">Login</a>
-</section>
-<nav>
-    <a href="./maps.html">MAP</a>
-    <a href="./index.html">HOME</a>
-    <a href="./about.html">ABOUT</a>
-</nav>
 
+<section id="header">
+    <a href="/" ><img src="https://logos-world.net/wp-content/uploads/2020/11/Apex-Legends-Emblem.png" alt="apex logo" id="logo"></a>
+    <h1>Apex Legends</h1>
+    <a href="" id="login-btn"><i class="fa-solid fa-skull"></i></a>
+</section>
+<nav id="navbar">
+    <div class="navbar-border"> 
+        <a href="/maps" >MAP</a>
+    </div> 
+
+    <div class="navbar-border"> 
+        <a href="/about" >ABOUT</a>
+    </div>
+</nav>
+<section id="page-container">
+    <div id="content-wrap"> 
 <section id="top-section"> 
-<h2> My tier list of legends</h2>
+<h2> Favorite Legends list:</h2>
 <div id="favLegends" class="container"></div>
 </section>
 
-<p> Select the picture to add to the list and to remove from the list. You will only be able to select five favorite legends.</p>
+<p id="how-to-use-desc"> Select the picture to add to the list and to remove from the list. You will only be able to select five favorite legends.</p>
 <section id="mid-section"> 
-    <!-- <div class="character-container">
-        <img src="https://media.contentapi.ea.com/content/dam/apex-legends/images/2020/10/horizon/apex-grid-tile-legends-horizon.png.adapt.crop16x9.png" alt="horizon image">
-        <h3>Horizon</h3>
-        <p>
-            “Lets have a wee play with the laws of physics, shall we?”
-        </p>
-    </div> -->
     <button id="see-all">See Legends</button>
     <div id="all-legends">
 
     </div>
-    <button>BACK TO TOP</button>
+<!-- testing -->
+
+<!-- testing -->
+    <button class="back-to-top hidden"> 
+        <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="back-to-top-icon"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M7 11l5-5m0 0l5 5m-5-5v12"
+        />
+      </svg>
+    </button>
 </section>
-<footer>
-    <p>Jose D Molina</p>
-    <ul>
-        <li>Facebook</li>
-        <li>Linkedin</li>
-        <li>Github</li>
-    </ul>
+</div>
+<footer id="footer">
+    
+    <p>© 2022 Jose D Molina</p>
+    <div> 
+        <a href="https://www.facebook.com/josedarrellmolina/"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/in/josedmolina/"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://github.com/josemolinaf22"><i class="fa-brands fa-github"></i></a>
+    </div>
+
 </footer>
+</section>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="/js"></script>
 </body>

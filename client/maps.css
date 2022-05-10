@@ -1,0 +1,19 @@
+h3 {
+    font-size: x-large;
+}
+p {
+    font-size: large;
+}
+
+.map-section{
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.map-img{
+    height: 30%;
+    width: 100%;
+}
+

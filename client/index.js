@@ -3,81 +3,89 @@
 const seeLegends = document.querySelector('#see-all')
 const allLegendsDiv = document.querySelector('#all-legends')
 const favLegendsDiv /* choicesDiv*/ = document.querySelector('#favLegends')
+const backToTopButton = document.querySelector(".back-to-top")
 
-let choices = []
+let legends = []
 let favLegends = []
 
 // VV Controller <VV i think 
 const makeLegendChoiceCard = (legend) => {
     return `
-    <div class="character-container">
+    <div class="character-container" id="${legend.id}">
     <img src='${legend.imgAddress}' alt='${legend.name}' onclick='putLegendBack(${legend.id})'/>
     <h3>${legend.name}</h3>
-    <p>${legend.lure}</p>
     </div>
     `
 }
-/* <button class="legend-btn" onclick="putLegendBack(${legend.id})">Remove from list</button> */
 
 const makeLegendDisplayCard = (legend) => {
+
     return `
-    <div class="character-container">
+    <div class="character-container tooltip-wrap" id="${legend.id}">
     <img  id='charac-img' src='${legend.imgAddress}' alt='${legend.name}' onclick='chooseLegend(${legend.id})'/>
     <h3>${legend.name}</h3>
     <p>${legend.lure}</p>
+    <div class="tooltip-content">
+    <div class="ability-container"> 
+    <div class="desc-ability"> 
+    <img src="${legend.tactical[0].imgAddress}" class="ability-img"/>
+    <p>${legend.tactical[0].name}</p> 
+    </div>
+    <div class="desc-ability"> 
+    <img src="${legend.passive[0].imgAddress}" class="ability-img"/>
+    <p>${legend.passive[0].name}</p> 
+    </div>
+    <div class="desc-ability"> 
+    <img src="${legend.ultimate[0].imgAddress}" class="ability-img"/>
+    <p>${legend.ultimate[0].name}</p> 
+    </div>
+    
+    </div>
+    </div>
     </div>
     `
 }
-/* <button class="legend-btn" onclick="chooseLegend(${legend.id})">Add to list</button> */
+ 
 
-// const renderChoices = () => {
-//     favLegendsDiv.innerHTML = ''
-
-//     favLegends.forEach(choice => {
-//         let legendHtml = makeLegendChoiceCard(choice)
-//         favLegendsDiv.innerHTML += legendHtml
-//     });
-// }
-
-const renderFavLegends = () => {
+const renderFavLegends = (legends) => {
     favLegendsDiv.innerHTML = ''
-
-    .forEach(legend =>{
+    // console.log(legends)
+        legends.forEach(legend => { 
+        document.getElementById(legend.id).style.display="none"
         let legendHtml = makeLegendChoiceCard(legend)
         favLegendsDiv.innerHTML += legendHtml
-    })
+        })
 }
 
 const chooseLegend = (id) => {
-    if(favLegends.length === 5){
-        return alert('you can only have 5 on the list.')
-    }
-    let index = favLegends.findIndex(legend => legend.id ===id)
-    favLegends.push(favLegends[index])
-     choices.splice(index, 1)
-    /*renderChoices()*/
-    renderFavLegends()
-
+    axios.get('http://localhost:4006/api/legends')
+        .then(res => {
+            let index = res.data.findIndex(legend => legend.id ===id)
+            let body = res.data[index]
+            axios.post('http://localhost:4006/api/favLegends', body)
+            .then(res =>{
+                renderFavLegends(res.data)
+            })
+            .catch(error => {
+                alert('Too many legends!!')
+            })
+        })
 }
 
 const putLegendBack = (id) => {
-    let index = favLegends.findIndex(legend => legend.id ===id)
-    choices.push(favLegends[index])
-    favLegends.splice(index,1)
-    renderChoices()
-    
+    // console.log(id)
+ axios.delete(`/api/favLegends/${id}`)
+ .then(res => {
+     renderFavLegends(res.data)
+     document.getElementById(id).style.display="flex"
+ })
 }
-
-
+// This data from server
 const allLegends = () => {
-    // console.log('why is this not working?')
+    
     axios.get('http://localhost:4006/api/legends')
     .then(res => {
-
-        console.log(choices)
-        // console.log(res.data)
         allLegendsDiv.innerHTML = ''
-
         
         res.data.forEach(legend =>{
             let legendHtml = makeLegendDisplayCard(legend)
@@ -85,8 +93,39 @@ const allLegends = () => {
         })
 
         seeLegends.style.display="none";
+        getAllFavLegends()
     })
-    
 }
 
+//hide button 
+const showOnPx  = 100;
+const  scrollContainer = () => {
+    return document.documentElement || document.body;
+};
+
+const goToTop = () => {
+    document.body.scrollIntoView({
+        behavior: "smooth",
+    });
+}
 seeLegends.addEventListener('click', allLegends)
+backToTopButton.addEventListener('click', goToTop)
+
+//back to top button
+document.addEventListener("scroll", () => {
+    if(scrollContainer().scrollTop > showOnPx){
+        backToTopButton.classList.remove("hidden")
+    } else {
+        backToTopButton.classList.add("hidden")
+    }
+})
+
+
+const getAllFavLegends = () => {
+    axios.get('http://localhost:4006/api/favLegends')
+    .then(res => {
+        renderFavLegends(res.data.favLegends)
+        
+    })
+}
+getAllFavLegends()

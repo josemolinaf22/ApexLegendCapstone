@@ -4,9 +4,93 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Maps</title>
+    <link rel="stylesheet" href="/maincss">
+    <link rel="stylesheet" href="/mapscss">
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Teko:wght@300&display=swap" rel="stylesheet">
+    <!-- fontawesome -->
+        <script src="https://kit.fontawesome.com/c3d8ec9fd6.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <section id="header">
+        <a href="/" ><img src="https://logos-world.net/wp-content/uploads/2020/11/Apex-Legends-Emblem.png" alt="apex logo" id="logo"></a>
+        <h1>Apex Legends</h1>
+        <a href="" id="login-btn"><i class="fa-solid fa-skull"></i></a>
+    </section>
+    <nav id="navbar">
+        <div class="navbar-border"> 
+            <a href="/maps" >MAP</a>
+        </div> 
     
+        <div class="navbar-border"> 
+            <a href="/about" >ABOUT</a>
+        </div>
+    </nav>
+    <section id="page-container">
+        <div id="content-wrap"> 
+    
+    <section class="map-section"> 
+        <img src="https://media.contentapi.ea.com/content/dam/apex-legends/common/legacy/maps/apex-media-maps-kings-canyon-xl-l-m.jpg.adapt.1024w.jpg" alt="King Canyon image" class="map-img">
+        <h3>Kings Canyon</h3>
+        <p>Once a simple settlement on the planet Solace, the island known as Kings Canyon didn't thrive until the IMC chose it as a hub for research and development. It housed an airbase, a water treatment plant, and a plethora of other facilities to support the IMC’s operations - like a highly classified project on the function of Phase tech, or a radical program to create a simulacra army powered by a single brain. But on the surface, Kings Canyon seemed like a simple IMC installation that, for all its faults, brought stability and jobs to Solace.</p>
+    </section>
+
+    <section class="map-section">
+        <img src="https://media.contentapi.ea.com/content/dam/apex-legends/common/legacy/maps/apex-media-maps-worlds-edge-xl-l-m.jpg.adapt.1024w.jpg" alt="Worlds edge image" class="map-img">
+        <h3>World's Edge</h3>
+        <p>A harsh planet beset by intense volcanic activity, Talos was once deemed uninhabitable, and only small luddite settlements took root there. However, it became a hotbed of IMC activity when a rare mineral compound was discovered beneath its surface. Heat-reducing towers were built to super-cool its natural lava flows and allow resource extraction - the facility that housed them was optimistically dubbed “New Dawn”, and the town of World’s Edge grew around it.</p>
+       
+    </section>  
+
+    <section class="map-section">
+        <img src="https://media.contentapi.ea.com/content/dam/apex-legends/common/legacy/maps/apex-media-maps-olympus-xl-l-m.jpg.adapt.1024w.jpg" alt="Olympus image" class="map-img">
+        <h3>Olympus</h3>
+        <p>Once a city built on dreams, Olympus was a utopia floating in clouds above Psamathe. Here, the brightest minds in the Outlands could gather and exchange ideas, leading to breakthroughs in the sciences and arts. However, an accident in an experimental research facility led to the creation of the Phase Rift (a massive bubble of Phase energy), and the Outlands’ best and brightest quickly abandoned the city. With the support of the Mercenary Syndicate, Hammond Robotics stepped in to transform Olympus into a new stage for the Apex Games.</p>
+       
+    </section>  
+
+    <section class="map-section">
+        <img src="https://media.contentapi.ea.com/content/dam/apex-legends/common/legacy/maps/apex-media-maps-stormpoint-xl-l-m.jpg.adapt.1024w.jpg" alt="Storm Point" class="map-img">
+        <h3>Storm Point</h3>
+        <p>This deserted island wasn't always so deserted. A beautiful isle with plentiful resources, Storm Point was one of the first places where early IMC expeditions made landfall on the planet Gaea. However, the area was isolated and beset by tropical storms. A permanent settlement was established on a nearby coastline – today known as the city of Suotamo – and power-generating storm catchers were built on Storm Point to meet the growing city’s energy needs.</p>
+       
+    </section>  
+
+
+
+
+            <button class="back-to-top hidden"> 
+                <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="back-to-top-icon"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M7 11l5-5m0 0l5 5m-5-5v12"
+                />
+              </svg>
+            </button>
+</div>
+<footer id="footer">
+    
+    <p>© 2022 Jose D Molina</p>
+    <div> 
+        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        <a href=""><i class="fa-brands fa-github"></i></a>
+    </div>
+
+</footer>
+    </section>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/mapsjs"></script>
+</body>
 </body>
 </html>

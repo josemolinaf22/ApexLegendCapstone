@@ -1,0 +1,23 @@
+#content-wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.info-container {
+    padding: 50px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+
+#content-wrap {
+    background-image: url("https://media4.giphy.com/media/ft4qpXYBsoIb2eJAYg/giphy.gif?cid=ecf05e47g2z0ahd1xx9ikdy24j1evxkebn43lzvsyffk0cma&rid=giphy.gif&ct=g");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
