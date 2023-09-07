@@ -55,7 +55,7 @@ const renderFavLegends = (legends) => {
 };
 
 const chooseLegend = (id) => {
-  axios.get("http://localhost:4006/api/legends").then((res) => {
+  axios.get("/api/legends").then((res) => {
     let index = res.data.findIndex((legend) => legend.id === id);
     let body = res.data[index];
     axios
