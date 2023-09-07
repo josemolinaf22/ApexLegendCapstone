@@ -78,7 +78,7 @@ const putLegendBack = (id) => {
 };
 // This data from server
 const allLegends = () => {
-  axios.get("http://localhost:4006/api/legends").then((res) => {
+  axios.get("http://localhost:10000/api/legends").then((res) => {
     allLegendsDiv.innerHTML = "";
 
     res.data.forEach((legend) => {
