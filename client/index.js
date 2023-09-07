@@ -55,11 +55,11 @@ const renderFavLegends = (legends) => {
 };
 
 const chooseLegend = (id) => {
-  axios.get("http://localhost:4006/api/legends").then((res) => {
+  axios.get("/api/legends").then((res) => {
     let index = res.data.findIndex((legend) => legend.id === id);
     let body = res.data[index];
     axios
-      .post("http://localhost:4006/api/favLegends", body)
+      .post("/api/favLegends", body)
       .then((res) => {
         renderFavLegends(res.data);
       })
@@ -115,7 +115,7 @@ document.addEventListener("scroll", () => {
 });
 
 const getAllFavLegends = () => {
-  axios.get("http://localhost:4006/api/favLegends").then((res) => {
+  axios.get("/api/favLegends").then((res) => {
     renderFavLegends(res.data.favLegends);
   });
 };
