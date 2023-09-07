@@ -1,4 +1,4 @@
-const axios = require("axios").default;
+import axios from "axios";
 
 // const choicesDiv = document.querySelector('#choices')
 const seeLegends = document.querySelector("#see-all");
