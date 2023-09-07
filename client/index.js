@@ -55,7 +55,7 @@ const renderFavLegends = (legends) => {
 };
 
 const chooseLegend = (id) => {
-  axios.get("/api/legends").then((res) => {
+  axios.get("http://localhost:4006/api/legends").then((res) => {
     let index = res.data.findIndex((legend) => legend.id === id);
     let body = res.data[index];
     axios
@@ -78,7 +78,7 @@ const putLegendBack = (id) => {
 };
 // This data from server
 const allLegends = () => {
-  axios.get("http://localhost:10000/api/legends").then((res) => {
+  axios.get("/api/legends").then((res) => {
     allLegendsDiv.innerHTML = "";
 
     res.data.forEach((legend) => {
