@@ -15,7 +15,7 @@ The project was made to help me solidify my understanding of the basic principle
 -Languages: Html, Css, Javascript
 -Frameworks and Libraries: Node.js, Express.js
 -Technologies and Tools: VS Code, Figma, Trello, Git, Render
--Testing: Jest
+-Testing= Jest
 
 ## Challenges
 
