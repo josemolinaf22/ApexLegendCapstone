@@ -1,4 +1,6 @@
+<center>
 <img src="https://logos-world.net/wp-content/uploads/2020/11/Apex-Legends-Emblem.png" width="250" align="right">
+</center>
 
 # APEX LEGENDS FAVORITE LIST
 
