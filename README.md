@@ -2,6 +2,8 @@
 <img src="https://logos-world.net/wp-content/uploads/2020/11/Apex-Legends-Emblem.png" width="250" align="center">
 </center>
 
+<link src="https://apextierlist.onrender.com" > go to page </link>
+
 # APEX LEGENDS FAVORITE LIST
 
 ## Project Summary
