@@ -1,6 +1,6 @@
 <center>
 <img src="https://logos-world.net/wp-content/uploads/2020/11/Apex-Legends-Emblem.png" width="250" align="center">
-</center>
+
 
 [Go To Page](https://apextierlist.onrender.com/)
 
@@ -20,3 +20,4 @@ The project was made to help me solidify my understanding of the basic principle
 ## Challenges
 
 The most challenging part of the project was making a server and requesting data from it. With the help of my mentors and peers, I was able to collaborate on these challenges and finish my project.
+</center>
